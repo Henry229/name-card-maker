@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import Button from '../button/button';
 import styles from './card_edit_form.module.css';
 
-const CardEditForm = ({card, updateCard, deleteCard}) => {
+const CardEditForm = ({FileInput, card, updateCard, deleteCard}) => {
   const nameRef = useRef();
   const companyRef = useRef();
   const themeRef = useRef();
@@ -11,10 +11,17 @@ const CardEditForm = ({card, updateCard, deleteCard}) => {
   const messageRef = useRef();
 
   const {name, company, title, email, message, theme, fileName} = card;
-  console.log('yogida1:',card)
+
+  const onFileChange = file => {
+    updateCard({
+      ...card,
+      fileName: file.name,
+      fileURL: file.url,
+    })
+  }
 
   const onChange = event => {
-    if (event.currentTartget == null) {
+    if (event.currentTarget == null) {
       return;
     }
     event.preventDefault();
@@ -40,9 +47,9 @@ const CardEditForm = ({card, updateCard, deleteCard}) => {
         </select>
         <input className={styles.input} onChange={onChange} type="text" name="title" ref={titleRef} value={title} />
         <input className={styles.input} onChange={onChange} type="text" name="email" ref={emailRef} value={email} />
-        <textarea className={styles.input} onchange={onChange} name="message" id="" ref={messageRef} value={message} />
-        <div>
-          <img src="" alt="" />
+        <textarea className={styles.input} onChange={onChange} name="message" id="" ref={messageRef} value={message} />
+        <div className={styles.fileInput}>
+          <FileInput name={fileName} onFileChange={onFileChange} />
         </div>
         <Button name="Delete" onClick={onSubmit} />
       </form>  

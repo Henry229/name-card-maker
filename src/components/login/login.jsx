@@ -15,7 +15,7 @@ const Login = ({authService}) => {
   const navigate = useNavigate();
   const location = useLocation(); 
   const goToMaker = (userId) => {
-    console.log('//gotoMaker:',location);
+    console.log('//gotoMaker:',userId,location);
     navigate('/maker', {state:{id:userId}});
   }
 

@@ -1,6 +1,6 @@
 @value makerBlack, makerWhite from '../../common/colors.css';
 
-.from {
+.form {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
