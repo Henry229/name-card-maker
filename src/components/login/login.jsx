@@ -3,7 +3,7 @@ import Header from '../header/header';
 import Footer from '../footer/footer';
 import Signin from '../signin/signin';
 import Signup from '../signup/signup';
-import styles from './login.module.css';
+import './login.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = ({authService}) => {
@@ -32,30 +32,26 @@ const Login = ({authService}) => {
   })
 
   return (
-    <section className={styles.login}>
-      <Header />
-        <section>
-          <div className={styles.container}>
-            {!index ? <Signin authService={authService}/> : <Signup authService={authService}/>}
-            <p onClick={toggleIndex} >
-              {!index ? "New user? Click here" : "Already have an account?"}
-            </p>
-          </div>
-          {/* <h1 className={styles.loginTitle}>Login</h1> */}
-          <ul className={styles.list} >
-            <li className={styles.item}>
-              <button className={styles.button} onClick={onLogin}>
-                Google
-              </button>
-            </li>
-            <li className={styles.item}>
-              <button className={styles.button} onClick={onLogin}>
-                Github
-              </button>
-            </li>
-          </ul>
-        </section>
-      <Footer />
+    <section className="login">
+      <div className="container">
+        {!index ? <Signin authService={authService}/> : <Signup authService={authService}/>}
+        <p onClick={toggleIndex} >
+          {!index ? "New user? Click here" : "Already have an account?"}
+        </p>
+      </div> 
+      {/* <h1 className="loginTitle">Login</h1> */}
+      <ul className="list" >
+        <li className="item">
+          <button type="button" className="button" onClick={onLogin}>
+            <img className="imgButton" src="/images/google-logo-9826.png" alt="" />Google
+          </button>
+        </li>
+        <li className="item">
+        <button type="button" className="button" onClick={onLogin}>
+            <img className="imgButton" src="/images/github-logo.png" alt="" />Github
+          </button>
+        </li>
+      </ul>
     </section>
   );
 };

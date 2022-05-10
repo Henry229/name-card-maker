@@ -17,12 +17,18 @@ const Signin = ({authService}) => {
   }
 
   return (
-    <div className={styles.form}>
-      <h1 className={styles.title}>Login</h1>
-      <form onSubmit={onLogInSubmit}>
-        <input type="email" ref={emailRef} placeholder="Email"/>
-        <input type="password" ref={pswRef} placeholder="Password"/>
-        <button className={styles.loginButton} type="submit" >Sign In</button>
+    <div className={styles.wrapBox}>
+      <h1 className={styles.loginTitle}> Login</h1>
+      <form className={styles.form} onSubmit={onLogInSubmit}>
+        <div>
+          <label className={styles.label}>Email</label>
+          <input className={styles.input} type="email" ref={emailRef} placeholder="Email"/>
+        </div>
+        <div>
+          <label className={styles.label}>Password</label>
+          <input className={styles.input}type="password" ref={pswRef} placeholder="Password"/>
+        </div>
+        <button className={styles.loginButton} type="submit" >LogIn</button>
       </form>
     </div>
   )     

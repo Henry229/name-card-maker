@@ -20,13 +20,22 @@ const Signup = ({authService}) => {
   }
 
   return (
-    <div className={styles.form}>
-      <h1 className={styles.title}>New User</h1>
-      <form onSubmit={onSignUpSubmit}>
-        <input type="email" ref={emailRef} placeholder="Email"/>
-        <input type="name" ref={nameRef} placeholder="Name"/>
-        <input type="password" ref={pwdRef} placeholder="Password"/>
-        <button className={styles.signUpButton} type="submit" >Sign Up</button>
+    <div className={styles.wrapBox}>
+      <h1 className={styles.signUpTitle}>Sign Up</h1>
+      <form className={styles.form} onSubmit={onSignUpSubmit}>
+      <div>
+        <label className={styles.label}>Email</label>
+        <input className={styles.input} type="email" ref={emailRef} placeholder="Email"/>
+      </div>
+      <div>
+        <label className={styles.label}>Name</label>
+        <input className={styles.input} type="name" ref={nameRef} placeholder="Name"/>
+      </div>
+      <div>
+        <label className={styles.label}>Password</label>
+        <input className={styles.input} type="password" ref={pwdRef} placeholder="Password"/>
+      </div>
+      <button className={styles.signUpButton} type="submit" >Sign Up</button>
       </form>
     </div>
   );

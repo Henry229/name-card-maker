@@ -8,6 +8,8 @@ import {
   GoogleAuthProvider, 
   GithubAuthProvider } from 'firebase/auth';
 // import { firebaseAuth, googleProvider } from './firebase';
+// https://name-card-maker-a3009.firebaseapp.com/__/auth/handler÷
+
 
 class AuthService {
   constructor() {
@@ -41,10 +43,10 @@ class AuthService {
 
   signInUser(email, password) {
     // setLoading(true);
-    console.log(`//signInUser : ${email} / ${password}`);
+    // console.log(`//signInUser : ${email} / ${password}`);
     return signInWithEmailAndPassword(this.firebaseAuth, email, password)
-      // .then((res) => console.log(res))
-      // .catch((err) => setError(err.code))
+      .then((res) => console.log(res))
+      .catch((err) => alert(err))
       // .finally(() => setLoading(false));
   };
 
@@ -52,8 +54,8 @@ class AuthService {
     switch(providerName) {
       case 'Google':
         return this.googleProvider;
-      // case 'Github':
-      //   return githubProvider;
+      case 'Github':
+        return this.githubProvider;
       default:
         throw new Error(`not supported provider: ${providerName}`);
     }
