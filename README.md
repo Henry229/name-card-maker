@@ -7,7 +7,7 @@ Name Card Maker
 • It's the first project I've used called Database while learning React.
 
 • The reason why I started this project 
-  - I was wonderin how to get data from DB while makeing front-end pages.
+  - I was wondering how to get data from DB while makeing front-end pages.
   - I didn't like pretending to get data by using like 'setTimeout()'.
   - I was wondering how to use Firebase.
   
