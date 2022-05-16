@@ -25,10 +25,9 @@ Name Card Maker
 
 ### Installing
 
-### Executing program
+### Executing Demo program
 
-* How to run the program
-* Step-by-step bullets
+* https://name-card-maker-a3009.web.app/
 ```
 code blocks for commands
 ```
