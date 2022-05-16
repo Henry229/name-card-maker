@@ -4,7 +4,7 @@ Name Card Maker
 
 ## Description
 
-• It's the first project I've used called Database while learning React.
+• It's the first project using Database while learning React.
 
 • The reason why I started this project 
   - I was wondering how to get data from DB while making front-end pages.
