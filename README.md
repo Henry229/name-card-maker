@@ -25,7 +25,7 @@ Name Card Maker
 
 ### Installing
 
-### Executing Demo program
+### Executing Demo Page
 
 * https://name-card-maker-a3009.web.app/
 ```
