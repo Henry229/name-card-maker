@@ -11,9 +11,9 @@ Name Card Maker
   - I didn't like pretending to get data by using like 'setTimeout()'.
   - I was wondering how to use Firebase.
   
-• Things I learned
-  - How to create and update data in firebase DB. 
-  - How to get the data you want to find like using 'select' in Mysql.
+• Things I implemented
+  - Create and update data in firebase DB. 
+  - Get the data you want to find like using 'select' in Mysql.
   - Authentication in Firebase.
   - the way using props in child components.
 
